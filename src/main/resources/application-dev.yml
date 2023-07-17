@@ -1,0 +1,42 @@
+# 公共配置写在application.yml ，环境差异性配置写在application-dev.yml中
+server:
+  port: 8085
+  servlet:
+    context-path: /sdsm-small
+spring:
+  application:
+    name: sdsm-small-tanglie
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    dynamic:
+      datasource:
+        kjczwl:
+          url: jdbc:mysql://127.0.0.1:3306/dev_sdsm_small?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true&allowMultiQueries=true
+          username: root
+          password: root
+          driverClassName: com.mysql.cj.jdbc.Driver
+        ztyw:
+          url: jdbc:mysql://127.0.0.1:3306/dev_sdsm_small?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true&allowMultiQueries=true
+          username: dev_sdsm
+          password: dev_sdsm.2022
+          driverClassName: com.mysql.cj.jdbc.Driver
+      primary: kjczwl
+#  cloud:
+#    nacos:
+#      discovery:
+#        namespace: public
+#        username: nacos
+#        password: cnksi.com
+#        server-addr: 127.0.0.1
+#        group: WORK_ORDER_TEST
+
+#是否为开发模式
+isDev: true
+pmsDevMode: true
+
+
+
+
+

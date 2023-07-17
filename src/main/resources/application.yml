@@ -1,0 +1,30 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /sdsm-small
+spring:
+  profiles:
+    active: dev
+  # 应用名称，注册中心的服务名
+  application:
+    name: sdsm-small
+
+# 接口文档knife4j配置信息   groupName、controllerBasePackage 必须先写准确，主要应用于在线文档的读取和展示
+knife4j:
+  groupName: 时代数码商城接口
+  controllerBasePackage: com.kjczwl
+  # 开启增强配置
+  enable: true
+  # 开启Swagger的Basic认证功能,默认是false  classpath:config/api-information.md
+  setting:
+    enableHomeCustom: true
+    homeCustomLocation:
+    enableFooter: false
+    footerCustomContent: xxx.xxx
+    enableOpenApi: true
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: kjczwl
+    # Basic认证密码
+    password: kjczwl2022
