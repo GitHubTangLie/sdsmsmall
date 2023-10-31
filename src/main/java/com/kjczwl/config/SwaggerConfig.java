@@ -35,13 +35,6 @@ public class SwaggerConfig {
                 .build();
     }
 
-    /***
-    * @Description: 
-    * @Param: []
-    * @return: springfox.documentation.spring.web.plugins.Docket
-    * @Author: Mr.Tang
-    * @Date: 2023/10/31
-    */
     @Bean
     public Docket createRestApiForCzp() {
         return new Docket(DocumentationType.SWAGGER_2)
